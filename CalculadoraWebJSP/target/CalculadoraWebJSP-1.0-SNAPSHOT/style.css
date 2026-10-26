@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    /*fondo*/
+    background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 50%, #f48fb1 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/*target bonito*/
+.calculadora {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px); /*bluuuurr*/
+    padding: 40px 35px;
+    border-radius: 28px;
+    box-shadow: 0 15px 35px rgba(233, 30, 99, 0.15);
+    width: 100%;
+    max-width: 380px;
+    border: 2px solid #f8bbd0;
+    transition: transform 0.3s ease;
+}
+
+.calculadora-container:hover {
+    transform: translateY(-5px); /*mouse*/
+}
+
+h2 {
+    color: #880e4f;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.formulario {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ad1457;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+input[type="number"], select {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #f8bbd0;
+    border-radius: 16px;
+    background-color: #fff;
+    color: #880e4f;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+input[type="number"]:focus, select:focus {
+    border-color: #ec407a;
+    box-shadow: 0 0 10px rgba(236, 64, 122, 0.2);
+}
+
+/*boton*/
+button {
+    background: linear-gradient(135deg, #ec407a 0%, #d81b60 100%);
+    color: white;
+    border: none;
+    padding: 16px;
+    width: 100%;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 8px 18px rgba(216, 27, 96, 0.3);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #d81b60 0%, #c2185b 100%);
+    box-shadow: 0 10px 22px rgba(216, 27, 96, 0.4);
+    transform: scale(1.02);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/*box resultado*/
+.resultado {
+    margin-top: 25px;
+    padding: 18px;
+    background: #fce4ec;
+    border: 2px dashed #f48fb1;
+    border-radius: 20px;
+    text-align: center;
+    color: #880e4f;
+    font-size: 1.1rem;
+    font-weight: 600;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
